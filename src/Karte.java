@@ -20,7 +20,7 @@ public class Karte implements Comparable<Karte> {
 
     public enum Zahl {
         ZWEI(2), DREI(3), VIER(4), FUENF(5), SECHS(6), SIEBEN(7), ACHT(8), NEUN(9), ZEHN(10),
-        BUBE(10, "B"), DAME(10, "D"), KOENIG(10, "K"), AS(11, "A");
+        BUBE(10, "B"), DAME(10, "D"), KOENIG(10, "K"), ASS(11, "A");
 
         private final int wert;
         private final String symbol;
