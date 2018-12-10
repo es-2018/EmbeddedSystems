@@ -44,7 +44,7 @@ public class Karte implements Comparable<Karte> {
         }
 
         public String toString() {
-            return String.valueOf(symbol);
+            return symbol;
         }
     }
 
