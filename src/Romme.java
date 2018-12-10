@@ -27,7 +27,7 @@ public class Romme {
         while (!ziehstapel.leer()) {
             al.add(ziehstapel.ziehen());
         }
-        Collections.sort(al);
+        Collections.sort(al, new ComparatorZahlFarbe());
 
         // Ausgabe
         System.out.println(al);
