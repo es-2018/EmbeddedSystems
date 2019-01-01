@@ -11,6 +11,10 @@ public class KartenStapel {
         this.offen = offen;
     }
 
+    public int size() {
+        return stack.size();
+    }
+
     public void mischen() {
         Collections.shuffle(stack);
     }
@@ -19,8 +23,18 @@ public class KartenStapel {
         stack.push(k);
     }
 
+    // Eine Karte ziehen
     public Karte ziehen() {
         return stack.pop();
+    }
+
+    // Mehrere Karten ziehen
+    public KartenListe ziehen(int n) {
+        KartenListe kl = new KartenListe();
+        for (int i = 0; i < n; i++) {
+            kl.add(ziehen());
+        }
+        return kl;
     }
 
     public Karte anschauen() {

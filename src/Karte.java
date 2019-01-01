@@ -72,6 +72,7 @@ public class Karte implements Comparable<Karte> {
         return farbe.toString() + zahl.toString();
     }
 
+    // Implementiere Interface Comparable<Karte>
     @Override
     public int compareTo(Karte karte) {
         if (this.getFarbe().ordinal() == karte.getFarbe().ordinal()) {
