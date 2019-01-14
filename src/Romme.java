@@ -6,7 +6,7 @@ public class Romme {
     private KartenStapel ziehstapel;
     private KartenStapel ablagestapel;
     private ArrayList<KartenListe> spielfeld;
-    private SpielerListe spielerListe;
+    private ArrayList<Spieler> spielerListe;
     private Spieler aktuellerSpieler;
 
     public Romme() {
@@ -18,7 +18,7 @@ public class Romme {
         ziehstapel = new KartenStapel(false);
         ablagestapel = new KartenStapel(true);
         spielfeld = new ArrayList<KartenListe>();
-        spielerListe = new SpielerListe();
+        spielerListe = new ArrayList<Spieler>();
 
         // DEBUG: Liste der Mitspieler
         // TODO: Kommandozeilen-Eingabe
@@ -50,7 +50,7 @@ public class Romme {
 
         // So lange die Spieler nacheinander ziehen lassen,
         // bis nur noch einer übrig ist (der Ring-Iterator stoppt, wenn nur noch 1 übrig ist)
-        Iterator<Spieler> it = spielerListe.ringIterator();
+        Iterator<Spieler> it = new SpielRingIterator(spielerListe);
         while(it.hasNext()) {
             Spieler s = it.next();
             System.out.println(s.name() + " ist dran.");
